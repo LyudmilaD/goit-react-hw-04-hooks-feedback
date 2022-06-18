@@ -26,10 +26,12 @@ export const App = () => {
     setState(state => ({ ...state, [name]: state[name] + 1 }));
   };
 
+  const options = Object.keys(state);
+
   return (
     <>
       <Section title="Please, leave feedback">
-        {/* <FeedbackOptions options={options} onLeaveFeedback={onLeaveFeedback} /> */}
+        <FeedbackOptions options={options} onLeaveFeedback={onLeaveFeedback} />
       </Section>
       <Section title="Statistics">
         {countTotalFeedback() ? (
