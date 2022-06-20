@@ -17,12 +17,17 @@
     color: gray;
     padding: 20px 30px;
     font-family: Georgia, 'Times New Roman', Times, serif;
-
+    font-weight:bold;
 
 }
 
 .text {
-    font-size: 14px;
+    background-color: #f2ff00;
+    color: gray;
+    list-style: none;
+    font-size: 20px;
+    padding: 20px 30px;
+    margin: 10px 20px;
     font-weight: 500;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
 }

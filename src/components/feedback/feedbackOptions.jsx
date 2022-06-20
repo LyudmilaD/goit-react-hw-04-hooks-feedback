@@ -3,23 +3,29 @@ import styles from './feedbackStyles.module.css';
 
 const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
-    <>
-      {options.map(option => (
+    <div>
+      {options.map(item => (
         <button
           className={styles.button}
-          key={option}
+          key={item.name}
           type="button"
-          onClick={() => onLeaveFeedback(option)}
+          onClick={() => onLeaveFeedback(item)}
         >
-          {option}
+          {item.name}
         </button>
       ))}
-    </>
+    </div>
   );
 };
 
 FeedbackOptions.propTypes = {
-  options: PropTypes.arrayOf(PropTypes.string).isRequired,
+  options: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      value: PropTypes.number,
+      onChange: PropTypes.func,
+    })
+  ),
   onLeaveFeedback: PropTypes.func.isRequired,
 };
 
