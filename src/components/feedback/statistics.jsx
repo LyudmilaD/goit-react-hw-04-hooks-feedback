@@ -1,21 +1,6 @@
 import PropTypes from 'prop-types';
 import styles from './feedbackStyles.module.css';
 
-// const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
-//   return (
-//     <>
-//       {Object.entries(good, neutral, bad, total, positivePercentage).map(
-//         ([key, value]) => (
-//           <p className={styles.text} key={key}>
-//             {key}: {value}
-//           </p>
-//         )
-//       )}
-//       <p className={styles.text}> Total: {total}</p>
-//       <p className={styles.text}> Positive feedback: {positivePercentage}%</p>
-//     </>
-//   );
-// };
 const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
   return (
     <>

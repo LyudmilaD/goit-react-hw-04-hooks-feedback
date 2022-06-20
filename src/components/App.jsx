@@ -5,16 +5,11 @@ import Section from './feedback/section';
 import FeedbackOptions from './feedback/feedbackOptions';
 import Notification from './feedback/notification';
 
-// export const App = () => {
-//   const [state, setState] = useState({
-//     good: 0,
-//     neutral: 0,
-//     bad: 0,
-//   });
 export const App = () => {
   const [good, setGood] = useState(0);
   const [neutral, setNeutral] = useState(0);
   const [bad, setBad] = useState(0);
+
   const options = [
     { name: 'good', value: good, onChahge: setGood },
     { name: 'neutral', value: neutral, onChahge: setNeutral },
